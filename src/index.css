@@ -9,4 +9,5 @@ body {
   width: 55%;
   height: 100%;
   padding: 10px 10px;
+  position: relative;
 }

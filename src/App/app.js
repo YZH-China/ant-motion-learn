@@ -20,6 +20,7 @@ import Zoom from '../examples/SingleElement/Zoom';
 import Rotate from '../examples/SingleElement/Rotate';
 import Vague from '../examples/SingleElement/Vague';
 import TimeAxis from '../examples/SingleElement/TimeAxis';
+import ChangeAnimParam from '../examples/SingleElement/ChangeAnimParam';
 
 class App extends Component {
 	constructor(props){
@@ -91,6 +92,7 @@ const SubSingleElementAnimation = () => (
 		<Route path="/singleElementAnimation/rotate" component={Rotate}></Route>
 		<Route path="/singleElementAnimation/vague" component={Vague}></Route>
 		<Route path="/singleElementAnimation/timeAxis" component={TimeAxis}></Route>
+		<Route path="/singleElementAnimation/changeAnimParam" component={ChangeAnimParam}></Route>
 	</div>
 )
 

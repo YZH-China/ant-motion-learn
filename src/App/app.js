@@ -6,6 +6,7 @@ import {
 } from 'react-router-dom';
 
 import './app.css';
+import './index.css';
 
 //引入API学习子组件
 import SingleElement from '../SingleElement';
@@ -27,6 +28,12 @@ import PathSlowing from '../examples/SingleElement/pathSlowing';
 import CurvePath from '../examples/SingleElement/CurvePath';
 import Bezier from '../examples/SingleElement/Bezier';
 
+//引入进出场动画范例子组件
+import Simple from '../examples/EntranceAndExit/Simple';
+import EnterAndLeave1 from '../examples/EntranceAndExit/EnterAndLeave1';
+import Addandremove from '../examples/EntranceAndExit/Addandremove';
+import CustomAnim from '../examples/EntranceAndExit/CustomAnim';
+
 class App extends Component {
 	constructor(props){
 		super(props);
@@ -45,15 +52,45 @@ class App extends Component {
 							<li>
 								<Link to="/singleElementAnimation">单元素动画范例</Link>
 							</li>
+							<li>
+								<Link to="/entrancsAndExit">进出场动画</Link>
+							</li>
 						</ul>
 					</nav>
 					<Route path="/apis" component={SubApi}></Route>
 					<Route path="/singleElementAnimation" component={SubSingleElementAnimation}></Route>
+					<Route path="/entrancsAndExit" component={SubEntrancsAndExit}></Route>
 				</div>
 			</Router>
 		);
 	}
 }
+
+const SubEntrancsAndExit = () => (
+	<div>
+		<ul className="subNav">
+			<li>
+				<Link to="/entrancsAndExit/simple">简单的例子</Link>
+			</li>
+			<li>
+				<Link to="/entrancsAndExit/enterandleave1">进场和离场1</Link>
+			</li>
+			<li>
+				<Link to="/entrancsAndExit/addandremove">添加与删除</Link>
+			</li>
+			<li>
+				<Link to="/entrancsAndExit/customAnim">自定义动画进出场</Link>
+			</li>
+			<li>
+				<Link to="/entrancsAndExit/complex">复杂的例子</Link>
+			</li>
+		</ul>
+		<Route path="/entrancsAndExit/simple" component={Simple}></Route>
+		<Route path="/entrancsAndExit/enterandleave1" component={EnterAndLeave1}></Route>
+		<Route path="/entrancsAndExit/addandremove" component={Addandremove}></Route>
+		<Route path="/entrancsAndExit/customAnim" component={CustomAnim}></Route>
+	</div>
+)
 
 const SubSingleElementAnimation = () => (
 	<div>

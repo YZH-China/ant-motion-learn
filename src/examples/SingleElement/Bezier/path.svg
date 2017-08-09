@@ -1,0 +1,15 @@
+<svg width="500" height="500" xmlns="http://www.w3.org/2000/svg">
+  <!--
+    路径指令中与贝塞尔曲线相关的指令有四个
+    C、S（三次贝塞尔曲线和平滑三次贝塞尔曲线） | Q、T（二次贝塞尔曲线和平滑二次贝塞尔曲线）
+    三次贝塞尔曲线：有两个控制点
+      C：x1 y1 x2 y2 x y（其中x1-y1，x2-y2是两个控制点，x-y是曲线关键点，再加上当前点）
+      S: x1 y1 x y（S一定与用在C或S之后，否则与Q表现相同）
+    二次贝塞尔曲线：有一个控制点
+      Q: x1 y1 x y（一个控制点x1-y1，一个结果点x-y，一个当前点）
+      T: x y（x-y表示结果点）
+  -->
+  <path d="M10,10 L90,90" style="fill:none;stroke:black;stroke-width:2" />
+  <path d="M100,50 Q150,100 200,50 T300,50" style="fill:none;stroke:black;stroke-width:2" />
+  <path d="M10 80 C 40 10, 65 10, 95 80 S 150 150, 180 80" style="fill:none;stroke:black;stroke-width:2">  
+</svg>

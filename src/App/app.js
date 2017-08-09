@@ -21,6 +21,11 @@ import Rotate from '../examples/SingleElement/Rotate';
 import Vague from '../examples/SingleElement/Vague';
 import TimeAxis from '../examples/SingleElement/TimeAxis';
 import ChangeAnimParam from '../examples/SingleElement/ChangeAnimParam';
+import SvgLinear from '../examples/SingleElement/SvgLinear';
+import SvgMorph from '../examples/SingleElement/SvgMorph';
+import PathSlowing from '../examples/SingleElement/pathSlowing';
+import CurvePath from '../examples/SingleElement/CurvePath';
+import Bezier from '../examples/SingleElement/Bezier';
 
 class App extends Component {
 	constructor(props){
@@ -93,6 +98,11 @@ const SubSingleElementAnimation = () => (
 		<Route path="/singleElementAnimation/vague" component={Vague}></Route>
 		<Route path="/singleElementAnimation/timeAxis" component={TimeAxis}></Route>
 		<Route path="/singleElementAnimation/changeAnimParam" component={ChangeAnimParam}></Route>
+		<Route path="/singleElementAnimation/svgLinear" component={SvgLinear}></Route>
+		<Route path="/singleElementAnimation/svgDeformation" component={SvgMorph}></Route>
+		<Route path="/singleElementAnimation/pathSlowing" component={PathSlowing}></Route>
+		<Route path="/singleElementAnimation/curvePath" component={CurvePath}></Route>
+		<Route path="/singleElementAnimation/curveAnimation" component={Bezier}></Route>
 	</div>
 )
 

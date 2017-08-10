@@ -33,6 +33,16 @@ import Simple from '../examples/EntranceAndExit/Simple';
 import EnterAndLeave1 from '../examples/EntranceAndExit/EnterAndLeave1';
 import Addandremove from '../examples/EntranceAndExit/Addandremove';
 import CustomAnim from '../examples/EntranceAndExit/CustomAnim';
+import Complex from '../examples/EntranceAndExit/Complex';
+
+//引入滚动动画范例子组件
+import MyParallax from '../examples/ScrollAnim/Parallax';
+import CustomParallax from '../examples/ScrollAnim/CustomParallax';
+import ParallaxTimeLine from '../examples/ScrollAnim/ParallaxTimeLine';
+import MyOverPack from '../examples/ScrollAnim/OverPack';
+
+//引入Banner动画范例子组件
+import SimpleBanner from '../examples/Banner/Simple';
 
 class App extends Component {
 	constructor(props){
@@ -55,16 +65,58 @@ class App extends Component {
 							<li>
 								<Link to="/entrancsAndExit">进出场动画</Link>
 							</li>
+							<li>
+								<Link to="/scrollAnim">滚动动画</Link>
+							</li>
+							<li>
+								<Link to="/banner">Banner动画</Link>
+							</li>
 						</ul>
 					</nav>
 					<Route path="/apis" component={SubApi}></Route>
 					<Route path="/singleElementAnimation" component={SubSingleElementAnimation}></Route>
 					<Route path="/entrancsAndExit" component={SubEntrancsAndExit}></Route>
+					<Route path="/scrollAnim" component={SubScrollAnim}></Route>
+					<Route path="/banner" component={SubBanner}></Route>
 				</div>
 			</Router>
 		);
 	}
 }
+
+const SubBanner = () => (
+	<div>
+		<ul className="subNav">
+			<li>
+				<Link to="/banner/simple">简单的例子</Link>
+			</li>
+		</ul>
+		<Route path="/banner/simple" component={SimpleBanner}></Route>
+	</div>
+)
+
+const SubScrollAnim = () => (
+	<div>
+		<ul className="subNav">
+			<li>
+				<Link to="/scrollAnim/parallax">Parallax示例</Link>
+			</li>
+			<li>
+				<Link to="/scrollAnim/customParallax">自定义parallax</Link>
+			</li>
+			<li>
+				<Link to="/scrollAnim/parallaxTimeLine">parallax时间轴动画</Link>
+			</li>
+			<li>
+				<Link to="/scrollAnim/overpack">OverPack例子</Link>
+			</li>
+		</ul>
+		<Route path="/scrollAnim/parallax" component={MyParallax}></Route>
+		<Route path="/scrollAnim/customParallax" component={CustomParallax}></Route>
+		<Route path="/scrollAnim/parallaxTimeLine" component={ParallaxTimeLine}></Route>
+		<Route path="/scrollAnim/overpack" component={MyOverPack}></Route>
+	</div>
+)
 
 const SubEntrancsAndExit = () => (
 	<div>
@@ -89,6 +141,7 @@ const SubEntrancsAndExit = () => (
 		<Route path="/entrancsAndExit/enterandleave1" component={EnterAndLeave1}></Route>
 		<Route path="/entrancsAndExit/addandremove" component={Addandremove}></Route>
 		<Route path="/entrancsAndExit/customAnim" component={CustomAnim}></Route>
+		<Route path="/entrancsAndExit/complex" component={Complex}></Route> 
 	</div>
 )
 

@@ -44,6 +44,9 @@ import MyOverPack from '../examples/ScrollAnim/OverPack';
 //引入Banner动画范例子组件
 import SimpleBanner from '../examples/Banner/Simple';
 
+//引入成品组件
+import LogoGather from '../logoGather/logoGather.js';
+
 class App extends Component {
 	constructor(props){
 		super(props);
@@ -71,6 +74,9 @@ class App extends Component {
 							<li>
 								<Link to="/banner">Banner动画</Link>
 							</li>
+							<li>
+								<Link to="/logoGather">logo 聚集与散开</Link>
+							</li>
 						</ul>
 					</nav>
 					<Route path="/apis" component={SubApi}></Route>
@@ -78,6 +84,7 @@ class App extends Component {
 					<Route path="/entrancsAndExit" component={SubEntrancsAndExit}></Route>
 					<Route path="/scrollAnim" component={SubScrollAnim}></Route>
 					<Route path="/banner" component={SubBanner}></Route>
+					<Route path="/logoGather" component={LogoGather}></Route>
 				</div>
 			</Router>
 		);

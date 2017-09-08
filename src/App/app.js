@@ -45,7 +45,7 @@ import MyOverPack from '../examples/ScrollAnim/OverPack';
 import SimpleBanner from '../examples/Banner/Simple';
 
 //引入成品组件
-import LogoGather from '../logoGather/logoGather.js';
+import Edit from '../logoGather/Edit.js';
 
 class App extends Component {
 	constructor(props){
@@ -84,7 +84,7 @@ class App extends Component {
 					<Route path="/entrancsAndExit" component={SubEntrancsAndExit}></Route>
 					<Route path="/scrollAnim" component={SubScrollAnim}></Route>
 					<Route path="/banner" component={SubBanner}></Route>
-					<Route path="/logoGather" component={LogoGather}></Route>
+					<Route path="/logoGather" component={Edit}></Route>
 				</div>
 			</Router>
 		);

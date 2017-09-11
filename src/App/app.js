@@ -46,6 +46,9 @@ import SimpleBanner from '../examples/Banner/Simple';
 
 //引入成品组件
 import Edit from '../logoGather/Edit.js';
+import TableAddAndDelete from '../TableAddAndDelete/TableAddAndDelete.js';
+import ListAnim from '../ListAnim/ListAnim.js';
+import DetailSwitch from '../DetailSwitch/DetailSwitch.js';
 
 class App extends Component {
 	constructor(props){
@@ -77,6 +80,15 @@ class App extends Component {
 							<li>
 								<Link to="/logoGather">logo 聚集与散开</Link>
 							</li>
+							<li>
+								<Link to="/tableAddAndDelete">表格增删动画</Link>
+							</li>
+							<li>
+								<Link to="/ListAnim">列表动画</Link>
+							</li>
+							<li>
+								<Link to="/DetailSwitch">详情切换说明</Link>
+							</li>
 						</ul>
 					</nav>
 					<Route path="/apis" component={SubApi}></Route>
@@ -85,6 +97,9 @@ class App extends Component {
 					<Route path="/scrollAnim" component={SubScrollAnim}></Route>
 					<Route path="/banner" component={SubBanner}></Route>
 					<Route path="/logoGather" component={Edit}></Route>
+					<Route path="/tableAddAndDelete" component={TableAddAndDelete}></Route>
+					<Route path="/ListAnim" component={ListAnim} />
+					<Route path="/DetailSwitch" component={DetailSwitch} />
 				</div>
 			</Router>
 		);

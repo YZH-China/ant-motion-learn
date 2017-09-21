@@ -94,7 +94,7 @@ class DetailSwitch extends Component {
     let showInt = this.state.showInt;
     const imgAnim = [
       { translateX: [0, 300], opacity: [1, 0] },
-      { translateX: [0, -300], opcity: [1, 0] }
+      { translateX: [0, -300], opacity: [1, 0] }
     ];
     showInt += 1;
     if (showInt > dataArray.length - 1) {
@@ -126,10 +126,10 @@ class DetailSwitch extends Component {
             ease={['easeOutCubic', 'easeInQuad']}
           >
             <div className={`${this.props.className}-map map${i}`} key="map">
-              <img src={item.map} alt="地图图片${i}" width="100%"/>
+              <img src={item.map} alt={`地图图片${i}`} width="100%"/>
             </div>
             <div className={`${this.props.className}-pic pic${i}`} key="pic">
-              <img src={item.pic} alt="实物图片${i}" width="100%"/>  
+              <img src={item.pic} alt={`实物图片${i}`} width="100%"/>  
             </div>
           </QueueAnim>
         </Element>

@@ -49,6 +49,8 @@ import Edit from '../logoGather/Edit.js';
 import TableAddAndDelete from '../TableAddAndDelete/TableAddAndDelete.js';
 import ListAnim from '../ListAnim/ListAnim.js';
 import DetailSwitch from '../DetailSwitch/DetailSwitch.js';
+import ListSortDemo from '../ListSortDemo/ListSortDemo.js';
+import PicDetailAnim from '../PicDetailsAnim/PicDetailAnim.js';
 
 class App extends Component {
 	constructor(props){
@@ -89,6 +91,12 @@ class App extends Component {
 							<li>
 								<Link to="/DetailSwitch">详情切换说明</Link>
 							</li>
+							<li>
+								<Link to="/ListSortDemo">列表交换位置</Link>
+							</li>
+							<li>
+								<Link to="/PicDetailAnim">图片详情切换</Link>
+							</li>
 						</ul>
 					</nav>
 					<Route path="/apis" component={SubApi}></Route>
@@ -100,6 +108,8 @@ class App extends Component {
 					<Route path="/tableAddAndDelete" component={TableAddAndDelete}></Route>
 					<Route path="/ListAnim" component={ListAnim} />
 					<Route path="/DetailSwitch" component={DetailSwitch} />
+					<Route path="/ListSortDemo" component={ListSortDemo} />
+					<Route path="/PicDetailAnim" component={PicDetailAnim} />
 				</div>
 			</Router>
 		);

@@ -52,6 +52,9 @@ import DetailSwitch from '../DetailSwitch/DetailSwitch.js';
 import ListSortDemo from '../ListSortDemo/ListSortDemo.js';
 import PicDetailAnim from '../PicDetailsAnim/PicDetailAnim.js';
 
+//我的动态效果
+import CircleProgress from '../myAnimate/circleProgress/circleProgress.js';
+
 class App extends Component {
 	constructor(props){
 		super(props);
@@ -97,6 +100,9 @@ class App extends Component {
 							<li>
 								<Link to="/PicDetailAnim">图片详情切换</Link>
 							</li>
+							<li>
+								<Link to="/myAnimate">我的动效</Link>
+							</li>
 						</ul>
 					</nav>
 					<Route path="/apis" component={SubApi}></Route>
@@ -110,6 +116,7 @@ class App extends Component {
 					<Route path="/DetailSwitch" component={DetailSwitch} />
 					<Route path="/ListSortDemo" component={ListSortDemo} />
 					<Route path="/PicDetailAnim" component={PicDetailAnim} />
+					<Route path="/myAnimate" component={myAnimate} />
 				</div>
 			</Router>
 		);
@@ -252,6 +259,17 @@ const SubApi = () => (
 		<Route path="/apis/enterAnimation" component={EnterAnimation}></Route>
 		<Route path="/apis/pageScrollingAnimation" component={PageScrollingAnimation}></Route>
 		<Route path="/apis/bannerAnimation" component={BannerAnimation}></Route>
+	</div>
+)
+
+const myAnimate = () => (
+	<div>
+		<ul className="subNav">
+			<li>
+				<Link to="/myAnimate/circleProgress">环形进度条</Link>
+			</li>
+		</ul>
+		<Route path="/myAnimate/circleProgress" component={CircleProgress} />
 	</div>
 )
 

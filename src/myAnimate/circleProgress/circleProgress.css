@@ -1,0 +1,83 @@
+.circleprogress_wrapper {
+    width: 200px;
+    height: 200px;
+    margin: 50px auto;
+    position: relative;
+    border: 1px solid #ddd;
+}
+.wrapper {
+    width: 50%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    overflow: hidden;
+}
+.right {
+    right: 0;
+}
+.left {
+    left: 0;
+}
+.circleProgress {
+    width: 160px;
+    height: 160px;
+    position: absolute;
+    top: 0;
+    border: 20px solid transparent;
+    border-radius: 50%;
+    box-sizing: content-box;
+    transform: rotate(45deg);
+}
+.rightcircle {
+    right: 0;
+    border-color: green green transparent transparent;
+}
+.leftcircle {
+    left: 0;
+    border-color: transparent transparent green green;
+}
+
+@keyframes circleProgressLoad_right {
+    0% {
+        transform: rotate(45deg);
+    }
+    50%, 100% {
+        transform: rotate(225deg);
+    }
+}
+
+@keyframes circleProgressLoad_left{
+    0%, 50%{
+        transform: rotate(45deg);
+    }
+    100% {
+        transform: rotate(225deg);
+    }
+}
+
+/* svg + js 实现 */
+.dome2 {
+    transform-origin: center;
+    transform: rotate(-90deg);
+}
+
+/* tweenOne实现 */
+.tweenoneProgress {
+    width: 160px;
+    height: 160px;
+    border: 20px solid transparent;
+    box-sizing: content-box;
+    position: absolute;
+    top: 0;
+    border-radius: 50%;
+    transform-origin: center;
+    transform: rotate(-135deg);
+}
+.tweencircleleft {
+    left: 0;
+    border-color: transparent transparent red red;
+}
+.tweencircleright {
+    right: 0;
+    border-color: red red transparent transparent;
+}
